@@ -9,6 +9,7 @@
 #include <homestore/replication_service.hpp>
 #include <homestore/index_service.hpp>
 #include <iomgr/io_environment.hpp>
+#include <iomgr/iomgr_flip.hpp>
 
 #include <homeobject/homeobject.hpp>
 #include "hs_homeobject.hpp"
@@ -19,7 +20,6 @@
 #include "replication_state_machine.hpp"
 
 namespace homeobject {
-
 // HSHomeObject's own SuperBlock. Currently this only contains the SvcId SM
 // receives so we can set HomeObject::_our_id upon recovery
 struct svc_info_superblk_t {
@@ -121,6 +121,30 @@ DevType HSHomeObject::get_device_type(string const& devname) {
 }
 
 void HSHomeObject::init_homestore() {
+#ifdef _PRERELEASE
+//    LOGI("enabled flip for GC");
+//    auto flip_name = "local_blk_data_invalid";
+//    auto flip_count = std::numeric_limits< int >::max();
+//    auto flip_percent = 50;
+//    flip::FlipCondition null_cond;
+//    flip::FlipFrequency freq;
+//    freq.set_count(flip_count);
+//    freq.set_percent(flip_percent);
+//    m_fc.inject_noreturn_flip(flip_name, {null_cond}, freq);
+//    LOGINFO("Flip {} set", flip_name);
+
+    LOGI("enable no_space_left for GC");
+    // set_basic_flip("simulate_no_space_left", std::numeric_limits< int >::max(), 50);
+    auto flip_name = "simulate_no_space_left";
+    auto flip_count = std::numeric_limits< int >::max();
+    auto flip_percent = 20;
+    flip::FlipCondition null_cond;
+    flip::FlipFrequency freq;
+    freq.set_count(flip_count);
+    freq.set_percent(flip_percent);
+    m_fc.inject_noreturn_flip(flip_name, {null_cond}, freq);
+    LOGINFO("Flip {} set", flip_name);
+#endif
     auto app = _application.lock();
     RELEASE_ASSERT(app, "HomeObjectApplication lifetime unexpected!");
 
