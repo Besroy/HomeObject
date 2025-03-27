@@ -47,6 +47,11 @@ private:
     static constexpr uint64_t HS_CHUNK_SIZE = 2 * Gi;
     static constexpr uint32_t _data_block_size = 1024;
     static uint64_t _hs_chunk_size;
+
+    /// just for test tmp
+#ifdef _PRERELEASE
+    flip::FlipClient m_fc{iomgr_flip::instance()};
+#endif
     ///
 
     /// Overridable Helpers
