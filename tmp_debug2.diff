@@ -1,0 +1,31 @@
+diff --git a/src/lib/homestore_backend/heap_chunk_selector.cpp b/src/lib/homestore_backend/heap_chunk_selector.cpp
+index 5509087..bc347e6 100644
+--- a/src/lib/homestore_backend/heap_chunk_selector.cpp
++++ b/src/lib/homestore_backend/heap_chunk_selector.cpp
+@@ -56,11 +56,11 @@ csharedChunk HeapChunkSelector::select_chunk(homestore::blk_count_t count, const
+         // Both chunk_num_t and pg_id_t are of type uint16_t.
+         static_assert(std::is_same< pg_id_t, uint16_t >::value, "pg_id_t is not uint16_t");
+         static_assert(std::is_same< homestore::chunk_num_t, uint16_t >::value, "chunk_num_t is not uint16_t");
+-        uint32_t application_hint = hint.application_hint.value();
++        auto application_hint = hint.application_hint.value();
+         pg_id_t pg_id = (uint16_t)(application_hint >> 16 & 0xFFFF);
+         homestore::chunk_num_t v_chunk_id = (uint16_t)(application_hint & 0xFFFF);
+ 
+-        LOGWARNMOD(homeobject, "get create shard hint:  v_chunk_id {}, pg {}, application_hint", v_chunk_id, pg_id,
++        LOGWARNMOD(homeobject, "get create shard hint:  v_chunk_id {}, pg {}, application_hint {}", v_chunk_id, pg_id,
+                    application_hint);
+ 
+         return select_specific_chunk(pg_id, v_chunk_id);
+diff --git a/src/lib/homestore_backend/replication_state_machine.cpp b/src/lib/homestore_backend/replication_state_machine.cpp
+index aabbf0f..c12f063 100644
+--- a/src/lib/homestore_backend/replication_state_machine.cpp
++++ b/src/lib/homestore_backend/replication_state_machine.cpp
+@@ -163,7 +163,7 @@ ReplicationStateMachine::get_blk_alloc_hints(sisl::blob const& header, uint32_t
+         homestore::chunk_num_t v_chunk_id = v_chunkID.value();
+         hints.application_hint = ((uint64_t)pg_id << 16) | v_chunk_id;
+ 
+-        LOGW("set create shard hint:  v_chunk_id {}, pg {}, application_hint", v_chunkID.value(), pg_id,
++        LOGW("set create shard hint:  v_chunk_id {}, pg {}, application_hint {}", v_chunkID.value(), pg_id,
+              hints.application_hint.value());
+         return hints;
+     }

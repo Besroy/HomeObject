@@ -1,0 +1,390 @@
+nohup: ignoring input
+
+======== Input profiles ========
+Profile host:
+[settings]
+arch=x86_64
+build_type=RelWithDebInfo
+compiler=gcc
+compiler.cppstd=20
+compiler.libcxx=libstdc++11
+compiler.version=11
+os=Linux
+[conf]
+tools.build:skip_test=True
+
+Profile build:
+[settings]
+arch=x86_64
+build_type=Release
+compiler=gcc
+compiler.cppstd=20
+compiler.libcxx=libstdc++11
+compiler.version=11
+os=Linux
+
+
+======== Computing dependency graph ========
+Graph root
+    conanfile.py (homeobject/2.1.6): /home/ubuntu/HomeObject/conanfile.py
+Requirements
+    abseil/20230802.1#a8d06333152eb1926b5dbc51e3bb218d - Cache
+    boost/1.83.0#824266b91aab4ccba92e76bac65a7612 - Cache
+    breakpad/cci.20210521#f62966d8cf204bbf48ebadbe3c1b6a92 - Cache
+    bzip2/1.0.8#8779e3ee0cf27649212cd3fc0db4438b - Cache
+    c-ares/1.34.1#41c024ffe77a8b8af98389627fd2bcf2 - Cache
+    civetweb/1.16#e23686ffd93a9ca8c852a98e03d31cf7 - Cache
+    cxxopts/3.1.1#b358aff6883980b4f0915734a5c8214a - Cache
+    date/3.0.1#d41f3965e7ef977e948cb57a31165545 - Cache
+    double-conversion/3.3.0#33321c201741cc32b51169c6d2d05e60 - Cache
+    dpdk/nbi.21.05#ded913c027305760024f739a03499297 - Cache
+    farmhash/cci.20190513#87016cdc5c7f2599ae29e31f1f47666f - Cache
+    fio/nbi.3.28#b1b06f04ad2ed3582552068556738c6d - Cache
+    flatbuffers/23.5.26#b153646f6546daab4c7326970b6cd89c - Cache
+    fmt/10.0.0#69d97b04119d23d14739af45a611abfa - Cache
+    folly/nu2.2023.12.18.00#f94d20c07f77d974a7cf8ed08d6e41c3 - Cache
+    gflags/2.2.2#b15c28c567c7ade7449cf994168a559f - Cache
+    glog/0.6.0#f25568477a1100349c4c2959ce946717 - Cache
+    grpc/1.54.3#0afe9ed1b2eeaaba92e338e943cdbacf - Cache
+    homestore/6.5.15@oss/master - Editable
+    iomgr/11.3.12@oss/master#2f6efedf00740b86e6004f16f43f823b - Cache
+    isa-l/2.30.0#ec91ca050bb082ece0a109f729718a96 - Cache
+    libbacktrace/cci.20210118#f5d18dee9942ec36058b965afa867e7b - Cache
+    libcap/2.69#c076309153f498b6c881da151d119373 - Cache
+    libcurl/8.4.0#75a58bcdba79d1a39ff0226cc2955c83 - Cache
+    libdwarf/20191104#eae5fa1cb378f3b24919a0cd3d4baa23 - Cache
+    libelf/0.8.13#4f70a3555809ae50cc8add44f0f84288 - Cache
+    libevent/2.1.12#b6333a128075d75a3614bd8418bf2099 - Cache
+    libiberty/9.1.0#3060045a116b0fff6d4937b0fc9cfc0e - Cache
+    libmount/2.39.2#4cb87ec88b1c5aa767cd53114f4d6c61 - Cache
+    libselinux/3.6#5a78ff6ae5034eeaac8da723361a8ce4 - Cache
+    libsodium/1.0.19#3ddd1bc0d6b40a078f9441e46b73008c - Cache
+    libsystemd/255#8e49d0c6b1d63861e3e10665cc1b7b4d - Cache
+    libunwind/1.8.0#045502d366b4ce2bc52a492648e62d2b - Cache
+    liburing/2.8#62ead9595cc393717972842e53dc3099 - Cache
+    libxcrypt/4.4.36#8c550334855cb025189eac5ac764db1e - Cache
+    linux-syscall-support/cci.20200813#4e95f73eab4bf77fac7440a7636af29c - Cache
+    lz4/1.9.4#652b313a0444c8b1d60d1bf9e95fb0a1 - Cache
+    nlohmann_json/3.11.2#1ded6ae5d200a68ac17c51d528b945e2 - Cache
+    nuraft/2.4.3#e6a5dee27e2b83d110d8c4f6be7bac51 - Cache
+    nuraft_mesg/3.6.4@oss/main#56a7c3d5547a8cd94485a5871819e004 - Cache
+    openssl/3.3.1#b04a3d6b3458f52d3c0048bf441256c1 - Cache
+    pcre2/10.42#ac2227071f79a062167cf2fee7189d66 - Cache
+    pistache/nbi.0.0.5.1#4df0203beb68dada3f63f5c5214de7f1 - Cache
+    prometheus-cpp/1.1.0#acccaddfd115cd61979b33c8d75a9420 - Cache
+    protobuf/3.21.12#2099e6c66fcd31b52c3afc0c096c1d02 - Cache
+    rapidjson/cci.20230929#624c0094d741e6a3749d2e44d834b96c - Cache
+    re2/20230301#e8d673155a0494f27c7589b611e8350d - Cache
+    sisl/12.2.10@oss/master - Editable
+    snappy/1.1.10#71736cf030f30027d5c870a3ed2c77f0 - Cache
+    spdk/nbi.21.07.y#7d98adeeac6fda3f8ac32407e2cc260b - Cache
+    spdlog/1.12.0#baf01ff8c9be09bb6cb6c62c1804012c - Cache
+    userspace-rcu/nu2.0.14.0#305a4d7ba47b93af98595a96c592a89f - Cache
+    xz_utils/5.4.5#b885d1d79c9d30cff3803f7f551dbe66 - Cache
+    zlib/1.3.1#e20364c96c45455608a72543f3a53133 - Cache
+    zmarok-semver/1.1.0#8fa36df9e7cc11eccb0de3e5d7b401f7 - Cache
+    zstd/1.5.5#34e9debe03bf0964834a09dfbc31a5dd - Cache
+Test requirements
+    benchmark/1.8.2#345be9c3c40a344bfa168a3e44c11ad4 - Cache
+    cpr/1.10.4#8d07f829e785ac2dd37b12e912bafc8c - Cache
+    forestdb/cci.20220727#8f7eb0a070b3ab481ad073d74438e8a7 - Cache
+    gtest/1.14.0#25e2a474b4d1aecf5ff4f0555dcdf72c - Cache
+    jungle/cci.20221201#e259c13dd53abdaf7abc4197399b4d41 - Cache
+Build requirements
+    autoconf/2.71#1befc79989703cf0bab297b6e0307ca7 - Cache
+    automake/1.16.5#27a1996f8e84efd37c1bdacd9c8a5d7b - Cache
+    b2/5.2.1#91bc73931a0acb655947a81569ed8b80 - Cache
+    cmake/3.30.5#540068cc37f1d21b42b729c82d6bcb29 - Cache
+    flex/2.6.4#0 - Cache
+    gnu-config/cci.20210814#12da20e8cf2944f777a9ea286e5adb55 - Cache
+    gperf/3.1#1d622ad9717e9348ed3685c9994ad0b9 - Cache
+    libtool/2.4.7#95d373ad52578548281f0005dbf36aff - Cache
+    m4/1.4.19#f418fc0c03d5493b93ecc890159ed48c - Cache
+    meson/0.59.3#908d6dedbbbba4d1ef05064472a7f78e - Cache
+    meson/1.2.2#21b73818ba96d9eea465b310b5bbc993 - Cache
+    meson/1.3.1#a17179442f5a99378b58ef0a0f43babc - Cache
+    meson/1.4.0#2262941cc8fbb0099dd0c196ca2a6c01 - Cache
+    nasm/2.15.05#53a041f093283fa430d442e20908c43d - Cache
+    ninja/1.12.1#fd583651bf0c6a901943495d49878803 - Cache
+    pkgconf/2.1.0#9e71750d481accfc87b678b470a32956 - Cache
+    pkgconf/2.2.0#6462942a22803086372db44689ba825f - Cache
+    protobuf/3.21.12#2099e6c66fcd31b52c3afc0c096c1d02 - Cache
+    zlib/1.3.1#e20364c96c45455608a72543f3a53133 - Cache
+Resolved version ranges
+    abseil/[>=20230125.3 <=20230802.1]: abseil/20230802.1
+    b2/[>=5.2 <6]: b2/5.2.1
+    c-ares/[>=1.19.1 <2]: c-ares/1.34.1
+    cmake/[>=3.16.3 <4]: cmake/3.30.5
+    cmake/[>=3.16 <4]: cmake/3.30.5
+    homestore/[^6.4]@oss/master: homestore/6.5.15@oss/master
+    iomgr/[>=11.3 <12-]@oss/master: iomgr/11.3.12@oss/master
+    liburing/[>=2.1]: liburing/2.8
+    ninja/[>=1.10.2 <2]: ninja/1.12.1
+    nuraft_mesg/[^3.4]@oss/main: nuraft_mesg/3.6.4@oss/main
+    sisl/[^12.2]@oss/master: sisl/12.2.10@oss/master
+    zlib/[>=1.2.11 <2]: zlib/1.3.1
+Overrides
+    fmt/10.2.1: ['fmt/10.0.0']
+    openssl/[>=1.1 <4]: ['openssl/3.3.1']
+    lz4/1.9.4: ['lz4/1.9.4', None]
+    xz_utils/5.4.5: ['xz_utils/5.4.5']
+    libunwind/1.7.2: ['libunwind/1.8.0']
+    libunwind/1.8.0: ['libunwind/1.8.0']
+    libcurl/[>=7.78.0 <9]: ['libcurl/8.4.0']
+    openssl/[>=1 <4]: ['openssl/3.3.1#b04a3d6b3458f52d3c0048bf441256c1']
+    libcurl/[>=7.78 <9]: ['libcurl/8.4.0']
+
+======== Computing necessary packages ========
+double-conversion/3.3.0: Main binary package '427ba685c637d4b02789cda2bd590c754eb03890' missing
+double-conversion/3.3.0: Checking 11 compatible configurations
+double-conversion/3.3.0: Found compatible package '694caa73ffb0da5481daff2bcdfbb46c3b09cc9f': compiler.cppstd=gnu20
+flatbuffers/23.5.26: Main binary package 'c700272108fe8daf7be0771eb20adfda6541bf21' missing
+flatbuffers/23.5.26: Checking 9 compatible configurations
+flatbuffers/23.5.26: Found compatible package '4b2c44ec43add5414ae8fbaae9ac80322c53981d': compiler.cppstd=gnu20
+zmarok-semver/1.1.0: Main binary package '427ba685c637d4b02789cda2bd590c754eb03890' missing
+zmarok-semver/1.1.0: Checking 7 compatible configurations
+zmarok-semver/1.1.0: Found compatible package '694caa73ffb0da5481daff2bcdfbb46c3b09cc9f': compiler.cppstd=gnu20
+breakpad/cci.20210521: Main binary package 'ef56c148ee8af61cbf6a808124dd1ec0b879120b' missing
+breakpad/cci.20210521: Checking 11 compatible configurations
+breakpad/cci.20210521: Found compatible package 'af2c2e3e846dc6bc66b184966f107a06fc22508e': compiler.cppstd=gnu20
+protobuf/3.21.12: Main binary package '51d7d364ea6d2ceffb84be5e4088927f2bd1240e' missing
+protobuf/3.21.12: Checking 11 compatible configurations
+protobuf/3.21.12: Found compatible package '10670e90b03eb1607902ed190ae2fecdc52d69bb': compiler.cppstd=17
+Requirements
+    abseil/20230802.1#a8d06333152eb1926b5dbc51e3bb218d:427ba685c637d4b02789cda2bd590c754eb03890#77bc2804749bcc5a4a3ea81b10c6c2d0 - Cache
+    boost/1.83.0#824266b91aab4ccba92e76bac65a7612:6e0cf311eeed5500be8bceb9df61322d7423fb44#adbbdc0cfc07480e637218ec686d7599 - Cache
+    breakpad/cci.20210521#f62966d8cf204bbf48ebadbe3c1b6a92:af2c2e3e846dc6bc66b184966f107a06fc22508e#efa91c250571ab9a508cd17eeaf63926 - Cache
+    bzip2/1.0.8#8779e3ee0cf27649212cd3fc0db4438b:d2fd0bf682562652eedb970d66e83aded80b3fb1#0ee0e4357bf5c9749682a90d4c9ce5da - Cache
+    c-ares/1.34.1#41c024ffe77a8b8af98389627fd2bcf2:47459c5833d5feffa49b726f4e0b77c2c55202cf#fe5104adf4013bee0c9646f335be6b09 - Cache
+    civetweb/1.16#e23686ffd93a9ca8c852a98e03d31cf7:2f8302aab97867231c2e141839fec0c12abf1135#aaaa6db9b3e80eef3da47c8415820fc4 - Cache
+    cxxopts/3.1.1#b358aff6883980b4f0915734a5c8214a:da39a3ee5e6b4b0d3255bfef95601890afd80709#f4dfdc9b149c1875d795ceac4820564f - Cache
+    date/3.0.1#d41f3965e7ef977e948cb57a31165545:b144f27276a2b49831272d732a283e8f9d47563a#5c4e6f2439344f33c7abc792a90ffce5 - Cache
+    double-conversion/3.3.0#33321c201741cc32b51169c6d2d05e60:694caa73ffb0da5481daff2bcdfbb46c3b09cc9f#8aa4531577401e130295d81fab45b0b3 - Cache
+    dpdk/nbi.21.05#ded913c027305760024f739a03499297:76764d7e943814cbdce61baf598212f3e88f8ef5#f8e6e03c2309efad8fa2578c9630bf6c - Cache
+    farmhash/cci.20190513#87016cdc5c7f2599ae29e31f1f47666f:31d0241205e6b319408960c9fc6e01586f071096#80e2ac248894e96d33965317435dcee9 - Cache
+    fio/nbi.3.28#b1b06f04ad2ed3582552068556738c6d:25a6f978eb27473075f061bc84e29dc212da6617#710c7788085108fe8408a02983ef9721 - Cache
+    flatbuffers/23.5.26#b153646f6546daab4c7326970b6cd89c:4b2c44ec43add5414ae8fbaae9ac80322c53981d#5ed5161a32d563f88fd2639c16a400be - Cache
+    fmt/10.0.0#69d97b04119d23d14739af45a611abfa:bfffff20d38cee63f075f90c4ff74ea259510aea#995e495b7561445813118ca97c9da091 - Cache
+    folly/nu2.2023.12.18.00#f94d20c07f77d974a7cf8ed08d6e41c3:314791f8f3b5815109b1b048d1b62c0f8be9e7ee#0094d6647e270ab3049f0994735a12ad - Cache
+    gflags/2.2.2#b15c28c567c7ade7449cf994168a559f:44eabc4771aeee384507fc08c863c6435178263c#097971986cf0929db4ee61b1ea466dd9 - Cache
+    glog/0.6.0#f25568477a1100349c4c2959ce946717:70ef312adaf3de3d28aafe2130f224ba460b3d38#1d4e0badcae67b25cd890bd509913ae0 - Cache
+    grpc/1.54.3#0afe9ed1b2eeaaba92e338e943cdbacf:edb86e02f72f994ade296cded9142b7a1e2d9943#a523bbb5c87ef24786537fab3e4bf208 - Cache
+    homestore/6.5.15@oss/master:d89047f00922166e43782a7957b258d11a41b5b0 - Editable
+    iomgr/11.3.12@oss/master#2f6efedf00740b86e6004f16f43f823b:de4afba9fd7641c7148d99186de744072cc8247c#f1ea402ffa69e69d04b4904a00564270 - Cache
+    isa-l/2.30.0#ec91ca050bb082ece0a109f729718a96:7141b46dc36f162c1999825c09b1ec68c17d6616#6b81f45d69d12429c1ba380c957b11e7 - Cache
+    libbacktrace/cci.20210118#f5d18dee9942ec36058b965afa867e7b:7141b46dc36f162c1999825c09b1ec68c17d6616#0bbb2833877b20658fdccdcca210a76d - Cache
+    libcap/2.69#c076309153f498b6c881da151d119373:eaec93a510ae47a53d9064c550487e9bc9d93304#ca54b6f60c47895dbefd3cd5335a4409 - Cache
+    libcurl/8.4.0#75a58bcdba79d1a39ff0226cc2955c83:bdb8977f61353dd58abe7c687113abe17c2d1c32#087113ece29f84897505d3a409cae54c - Cache
+    libdwarf/20191104#eae5fa1cb378f3b24919a0cd3d4baa23:2c49e9427dee5c64efacd975052377b144973ab3#2cfa981f0d51007b5ea6b4ff762e8b18 - Cache
+    libelf/0.8.13#4f70a3555809ae50cc8add44f0f84288:7141b46dc36f162c1999825c09b1ec68c17d6616#cc3171b584329ea2126e91ce1f57e126 - Cache
+    libevent/2.1.12#b6333a128075d75a3614bd8418bf2099:b8e026a72adb4a0304db354647c4e987cd76c3f1#12acc95e1ad963d8a68ef68a7771da2e - Cache
+    libiberty/9.1.0#3060045a116b0fff6d4937b0fc9cfc0e:148731d494d2b86d5f44107851ee1cf13f61ed8d#38ae56748ab02f1b67e9435e01a29917 - Cache
+    libmount/2.39.2#4cb87ec88b1c5aa767cd53114f4d6c61:7141b46dc36f162c1999825c09b1ec68c17d6616#e279fc9822b679ac14012c443313ed90 - Cache
+    libselinux/3.6#5a78ff6ae5034eeaac8da723361a8ce4:d5174c69e9f2ba673d709140a42e81400a642782#4613565c8011b74871753a32d142cce2 - Cache
+    libsodium/1.0.19#3ddd1bc0d6b40a078f9441e46b73008c:297adbf6cb120a7b6399146c1930837c27c78b64#c20dcbf7e456aee2add038c102a73a2f - Cache
+    libsystemd/255#8e49d0c6b1d63861e3e10665cc1b7b4d:b6a8ce514e3e51bc15de31af2e61c6e88536c44d#56076d5c0797dc10a6973ab831221b63 - Cache
+    libunwind/1.8.0#045502d366b4ce2bc52a492648e62d2b:0f8341c70091001420dc8cffbef10b693bba3104#454e38258744a70b59af7660035cd669 - Cache
+    liburing/2.8#62ead9595cc393717972842e53dc3099:893e43a1ce9cc27ea3549b60ceba7dccc92f04f9#76bef76ce478d7c94522ae80d360f973 - Cache
+    libxcrypt/4.4.36#8c550334855cb025189eac5ac764db1e:7141b46dc36f162c1999825c09b1ec68c17d6616#2f6afa975ef8f5e14dfa359e608d0fcf - Cache
+    linux-syscall-support/cci.20200813#4e95f73eab4bf77fac7440a7636af29c:da39a3ee5e6b4b0d3255bfef95601890afd80709#f146019d18363ba686f80e56665f0020 - Cache
+    lz4/1.9.4#652b313a0444c8b1d60d1bf9e95fb0a1:7141b46dc36f162c1999825c09b1ec68c17d6616#fe67c94d7b5a5a1c0565a5c3b59f4bf5 - Cache
+    nlohmann_json/3.11.2#1ded6ae5d200a68ac17c51d528b945e2:da39a3ee5e6b4b0d3255bfef95601890afd80709#2d1a5b1f5d673e1dab536bed20ce000b - Cache
+    nuraft/2.4.3#e6a5dee27e2b83d110d8c4f6be7bac51:ff01a49be69c45c0940365dea39d1c17fb8a98e8#4af7ac825ce0e007d5fe65388a657fea - Cache
+    nuraft_mesg/3.6.4@oss/main#56a7c3d5547a8cd94485a5871819e004:8babb2a1a310a0db51d1b6119fe515afc13cd6ac#db2be9b5a6c5fbbb1d6dea53b81e1fa7 - Cache
+    openssl/3.3.1#b04a3d6b3458f52d3c0048bf441256c1:f7124f4882e8a147ba488837fa6a04d4bb37cbf7#87753cdcc81239352e3ff2442f0c42bf - Cache
+    pcre2/10.42#ac2227071f79a062167cf2fee7189d66:1d9f3ede54ef71d3c339f7805572ea701b9cec6d#e2fed182143957657394b9fa87e53fd3 - Cache
+    pistache/nbi.0.0.5.1#4df0203beb68dada3f63f5c5214de7f1:f2d8004c086e6626deb29b56d6081b2efc87dd11#3884712b7b1f2390c6efe772701d9bba - Cache
+    prometheus-cpp/1.1.0#acccaddfd115cd61979b33c8d75a9420:477f77ed91e57d7fcac0331885871b91feab0797#a403b520154365c0786e8a93a4cc71c7 - Cache
+    protobuf/3.21.12#2099e6c66fcd31b52c3afc0c096c1d02:8bdbae728cd1fdcfa761ae89e5340530d8404a86#5fbf5f43cb5a96a21bb8c3fba423764e - Cache
+    re2/20230301#e8d673155a0494f27c7589b611e8350d:ecf6fcdebab990d788993319b349f8a8b1a708b1#294f01b631e95d24866566e3fd30c458 - Cache
+    sisl/12.2.10@oss/master:f0ff277a79f4b741bbb646bda5f575ce9aff7588 - Editable
+    snappy/1.1.10#71736cf030f30027d5c870a3ed2c77f0:05d46cb8b72739263d85fb46acc4a51b27e2aa36#cf15911c230d779015901dcb52ce6cea - Cache
+    spdk/nbi.21.07.y#7d98adeeac6fda3f8ac32407e2cc260b:905d9a3ccef59f070862e721f0adeb6887225dee#a72b0129f0dae2eaf6d955a1a2f47210 - Cache
+    spdlog/1.12.0#baf01ff8c9be09bb6cb6c62c1804012c:509667d55fee911596914760be7a04996e3fd074#4615d11b5d706a7932feaafc6ba8190f - Cache
+    userspace-rcu/nu2.0.14.0#305a4d7ba47b93af98595a96c592a89f:7141b46dc36f162c1999825c09b1ec68c17d6616#b448602264ab77957df7cc54c95c5045 - Cache
+    xz_utils/5.4.5#b885d1d79c9d30cff3803f7f551dbe66:7141b46dc36f162c1999825c09b1ec68c17d6616#c71c1b3cd96f7b0091f60645d0ab8010 - Cache
+    zlib/1.3.1#e20364c96c45455608a72543f3a53133:7141b46dc36f162c1999825c09b1ec68c17d6616#b96eda2e3a4a1a2d7c28df503f3bbff3 - Cache
+    zmarok-semver/1.1.0#8fa36df9e7cc11eccb0de3e5d7b401f7:694caa73ffb0da5481daff2bcdfbb46c3b09cc9f#36a4cbe07212c142a8f20db2947496fc - Cache
+    zstd/1.5.5#34e9debe03bf0964834a09dfbc31a5dd:fc9ca5c11e099f2f1bc3f7907502e151e2bae555#6c32f1a14df6660526ea7762237d4ed9 - Cache
+Test requirements
+    benchmark/1.8.2#345be9c3c40a344bfa168a3e44c11ad4:8bb1eb7986536546c28b6edf0968c6a761697d94#72fe7bfbf12490548b184fde18d7a37d - Cache
+    gtest/1.14.0#25e2a474b4d1aecf5ff4f0555dcdf72c:dec6797a53c8ee92bc1c6586540cd6f2972efe5b#a4aabf84e88d8618d0a9165b86a66512 - Cache
+Build requirements
+Skipped binaries
+    rapidjson/cci.20230929, cpr/1.10.4, forestdb/cci.20220727, jungle/cci.20221201, autoconf/2.71, automake/1.16.5, b2/5.2.1, cmake/3.30.5, flex/2.6.4, gnu-config/cci.20210814, gperf/3.1, libtool/2.4.7, m4/1.4.19, meson/0.59.3, meson/1.2.2, meson/1.3.1, meson/1.4.0, nasm/2.15.05, ninja/1.12.1, pkgconf/2.1.0, pkgconf/2.2.0, protobuf/3.21.12, zlib/1.3.1
+
+======== Installing packages ========
+
+======== Installing packages ========
+abseil/20230802.1: Already installed! (1 of 57)
+bzip2/1.0.8: Already installed! (2 of 57)
+c-ares/1.34.1: Already installed! (3 of 57)
+cxxopts/3.1.1: Already installed! (4 of 57)
+double-conversion/3.3.0: Already installed! (5 of 57)
+farmhash/cci.20190513: Already installed! (6 of 57)
+fio/nbi.3.28: Already installed! (7 of 57)
+flatbuffers/23.5.26: Already installed! (8 of 57)
+fmt/10.0.0: Already installed! (9 of 57)
+gflags/2.2.2: Already installed! (10 of 57)
+gtest/1.14.0: Already installed! (11 of 57)
+libbacktrace/cci.20210118: Already installed! (12 of 57)
+libcap/2.69: Already installed! (13 of 57)
+libiberty/9.1.0: Already installed! (14 of 57)
+libmount/2.39.2: Already installed! (15 of 57)
+libsodium/1.0.19: Already installed! (16 of 57)
+liburing/2.8: Already installed! (17 of 57)
+linux-syscall-support/cci.20200813: Already installed! (18 of 57)
+lz4/1.9.4: Already installed! (19 of 57)
+nlohmann_json/3.11.2: Already installed! (20 of 57)
+re2/20230301: Already installed! (21 of 57)
+snappy/1.1.10: Already installed! (22 of 57)
+xz_utils/5.4.5: Already installed! (23 of 57)
+zlib/1.3.1: Already installed! (24 of 57)
+zmarok-semver/1.1.0: Already installed! (25 of 57)
+zstd/1.5.5: Already installed! (26 of 57)
+benchmark/1.8.2: Already installed! (27 of 57)
+dpdk/nbi.21.05: Already installed! (28 of 57)
+libelf/0.8.13: Already installed! (29 of 57)
+isa-l/2.30.0: Already installed! (30 of 57)
+libxcrypt/4.4.36: Already installed! (31 of 57)
+userspace-rcu/nu2.0.14.0: Already installed! (32 of 57)
+boost/1.83.0: Already installed! (33 of 57)
+breakpad/cci.20210521: Already installed! (34 of 57)
+libunwind/1.8.0: Already installed! (35 of 57)
+openssl/3.3.1: Already installed! (36 of 57)
+pcre2/10.42: Already installed! (37 of 57)
+pcre2/10.42: Appending PATH environment variable: /home/ubuntu/.conan2/p/b/pcre20f7845d1f3657/p/bin
+protobuf/3.21.12: Already installed! (38 of 57)
+spdlog/1.12.0: Already installed! (39 of 57)
+libdwarf/20191104: Already installed! (40 of 57)
+civetweb/1.16: Already installed! (41 of 57)
+glog/0.6.0: Already installed! (42 of 57)
+libevent/2.1.12: Already installed! (43 of 57)
+nuraft/2.4.3: Already installed! (44 of 57)
+libselinux/3.6: Already installed! (45 of 57)
+spdk/nbi.21.07.y: Already installed! (46 of 57)
+libcurl/8.4.0: Already installed! (47 of 57)
+folly/nu2.2023.12.18.00: Already installed! (48 of 57)
+date/3.0.1: Already installed! (49 of 57)
+libsystemd/255: Already installed! (50 of 57)
+prometheus-cpp/1.1.0: Already installed! (51 of 57)
+grpc/1.54.3: Already installed! (52 of 57)
+pistache/nbi.0.0.5.1: Already installed! (53 of 57)
+sisl/12.2.10@oss/master: Rewriting files of editable package 'sisl' at '/home/ubuntu/sisl/build/RelWithDebInfo/generators'
+sisl/12.2.10@oss/master: Calling generate()
+sisl/12.2.10@oss/master: Generators folder: /home/ubuntu/sisl/build/RelWithDebInfo/generators
+sisl/12.2.10@oss/master: CMakeToolchain generated: conan_toolchain.cmake
+sisl/12.2.10@oss/master: CMakeToolchain generated: /home/ubuntu/sisl/build/RelWithDebInfo/generators/CMakePresets.json
+sisl/12.2.10@oss/master: CMakeToolchain generated: /home/ubuntu/sisl/CMakeUserPresets.json
+sisl/12.2.10@oss/master: Generating aggregated env files
+sisl/12.2.10@oss/master: Generated aggregated env files: ['conanbuild.sh', 'conanrun.sh']
+iomgr/11.3.12@oss/master: Already installed! (55 of 57)
+nuraft_mesg/3.6.4@oss/main: Already installed! (56 of 57)
+homestore/6.5.15@oss/master: Rewriting files of editable package 'homestore' at '/home/ubuntu/HomeStore/build/RelWithDebInfo/generators'
+homestore/6.5.15@oss/master: Calling generate()
+homestore/6.5.15@oss/master: Generators folder: /home/ubuntu/HomeStore/build/RelWithDebInfo/generators
+homestore/6.5.15@oss/master: CMakeToolchain generated: conan_toolchain.cmake
+homestore/6.5.15@oss/master: CMakeToolchain generated: /home/ubuntu/HomeStore/build/RelWithDebInfo/generators/CMakePresets.json
+homestore/6.5.15@oss/master: CMakeToolchain generated: /home/ubuntu/HomeStore/CMakeUserPresets.json
+homestore/6.5.15@oss/master: Generating aggregated env files
+homestore/6.5.15@oss/master: Generated aggregated env files: ['conanbuild.sh', 'conanrun.sh']
+WARN: deprecated: Usage of deprecated Conan 1.X features that will be removed in Conan 2.X:
+WARN: deprecated:     'cpp_info.names' used in: pistache/nbi.0.0.5.1, abseil/20230802.1, spdlog/1.12.0, civetweb/1.16, c-ares/1.34.1, flatbuffers/23.5.26, zlib/1.3.1, fmt/10.0.0, libcurl/8.4.0, folly/nu2.2023.12.18.00, zstd/1.5.5, snappy/1.1.10, nuraft_mesg/3.6.4@oss/main, protobuf/3.21.12, openssl/3.3.1, lz4/1.9.4, pcre2/10.42, grpc/1.54.3, bzip2/1.0.8, xz_utils/5.4.5, gtest/1.14.0, boost/1.83.0, prometheus-cpp/1.1.0
+WARN: deprecated:     'cpp_info.build_modules' used in: grpc/1.54.3, bzip2/1.0.8, abseil/20230802.1, xz_utils/5.4.5, protobuf/3.21.12, gflags/2.2.2, flatbuffers/23.5.26, openssl/3.3.1, lz4/1.9.4
+WARN: deprecated:     'env_info' used in: spdk/nbi.21.07.y, dpdk/nbi.21.05, zstd/1.5.5, breakpad/cci.20210521, bzip2/1.0.8, grpc/1.54.3, civetweb/1.16, protobuf/3.21.12, c-ares/1.34.1, flatbuffers/23.5.26, openssl/3.3.1, boost/1.83.0, pcre2/10.42
+WARN: deprecated:     'cpp_info.filenames' used in: folly/nu2.2023.12.18.00, pistache/nbi.0.0.5.1, libevent/2.1.12, protobuf/3.21.12, flatbuffers/23.5.26, boost/1.83.0
+WARN: deprecated:     'user_info' used in: boost/1.83.0
+
+======== Finalizing install (deploy, generators) ========
+conanfile.py (homeobject/2.1.6): Calling generate()
+conanfile.py (homeobject/2.1.6): Generators folder: /home/ubuntu/HomeObject/build/RelWithDebInfo/generators
+conanfile.py (homeobject/2.1.6): CMakeToolchain generated: conan_toolchain.cmake
+conanfile.py (homeobject/2.1.6): CMakeToolchain: Preset 'conan-relwithdebinfo' added to CMakePresets.json.
+    (cmake>=3.23) cmake --preset conan-relwithdebinfo
+    (cmake<3.23) cmake <path> -G "Unix Makefiles" -DCMAKE_TOOLCHAIN_FILE=generators/conan_toolchain.cmake  -DCMAKE_POLICY_DEFAULT_CMP0091=NEW -DBUILD_TESTING=OFF -DCMAKE_BUILD_TYPE=RelWithDebInfo
+conanfile.py (homeobject/2.1.6): CMakeToolchain generated: /home/ubuntu/HomeObject/build/RelWithDebInfo/generators/CMakePresets.json
+conanfile.py (homeobject/2.1.6): CMakeToolchain generated: /home/ubuntu/HomeObject/CMakeUserPresets.json
+conanfile.py (homeobject/2.1.6): CMakeDeps necessary find_package() and targets for your CMakeLists.txt
+    find_package(homestore)
+    find_package(iomgr)
+    find_package(sisl)
+    find_package(GTest)
+    target_link_libraries(... homestore::homestore iomgr::iomgr sisl::sisl gtest::gtest)
+conanfile.py (homeobject/2.1.6): Generating aggregated env files
+conanfile.py (homeobject/2.1.6): Generated aggregated env files: ['conanbuild.sh', 'conanrun.sh']
+
+======== Calling build() ========
+conanfile.py (homeobject/2.1.6): Calling build()
+conanfile.py (homeobject/2.1.6): Running CMake.configure()
+conanfile.py (homeobject/2.1.6): RUN: cmake -G "Unix Makefiles" -DCMAKE_TOOLCHAIN_FILE="generators/conan_toolchain.cmake" -DCMAKE_INSTALL_PREFIX="/home/ubuntu/HomeObject" -DCMAKE_POLICY_DEFAULT_CMP0091="NEW" -DBUILD_TESTING="OFF" -DCMAKE_BUILD_TYPE="RelWithDebInfo" "/home/ubuntu/HomeObject"
+-- Using Conan toolchain: /home/ubuntu/HomeObject/build/RelWithDebInfo/generators/conan_toolchain.cmake
+-- Conan toolchain: Setting CMAKE_POSITION_INDEPENDENT_CODE=ON (options.fPIC)
+-- Conan toolchain: Defining architecture flag: -m64
+-- Conan toolchain: C++ Standard 20 with extensions OFF
+-- Conan toolchain: Setting BUILD_SHARED_LIBS = OFF
+-- settings_gen_cpp: processing /home/ubuntu/HomeObject/src/lib/homestore_backend/hs_backend_config.fbs
+-- settings_gen_cpp: processing /home/ubuntu/HomeObject/src/lib/homestore_backend/resync_pg_shard.fbs
+-- settings_gen_cpp: processing /home/ubuntu/HomeObject/src/lib/homestore_backend/resync_blob_data.fbs
+-- Build configuration:       RelWithDebInfo
+-- C++ compiler info:         GNU 11.4.0 
+-- C flags:                   -DPACKAGE_NAME=homeobject -DPACKAGE_VERSION=0.0.0 
+-- C++ flags:                 -m64 -DPACKAGE_NAME=homeobject -DPACKAGE_VERSION=0.0.0 -O2 -g -DNDEBUG
+-- Linker flags (executable): -m64 
+-- Linker flags (shared):     -m64 
+-- Linker flags (module):      
+-- Linker flags (static):      
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ubuntu/HomeObject/build/RelWithDebInfo
+
+conanfile.py (homeobject/2.1.6): Running CMake.build()
+conanfile.py (homeobject/2.1.6): RUN: cmake --build "/home/ubuntu/HomeObject/build/RelWithDebInfo" -- -j12
+Consolidate compiler generated dependencies of target test_heap_chunk_selector
+Consolidate compiler generated dependencies of target homeobject_core
+Consolidate compiler generated dependencies of target test_fixture
+[  2%] Building CXX object src/lib/homestore_backend/tests/CMakeFiles/test_heap_chunk_selector.dir/test_heap_chunk_selector.cpp.o
+[  4%] Building CXX object src/lib/CMakeFiles/homeobject_core.dir/homeobject_impl.cpp.o
+[  6%] Building CXX object src/lib/CMakeFiles/homeobject_core.dir/blob_manager.cpp.o
+[  9%] Building CXX object src/lib/homestore_backend/tests/CMakeFiles/test_heap_chunk_selector.dir/__/heap_chunk_selector.cpp.o
+[ 11%] Building CXX object src/lib/CMakeFiles/homeobject_core.dir/shard_manager.cpp.o
+[ 13%] Building CXX object src/lib/CMakeFiles/homeobject_core.dir/pg_manager.cpp.o
+[ 16%] Building CXX object src/lib/tests/CMakeFiles/test_fixture.dir/BlobManagerTest.cpp.o
+[ 18%] Building CXX object src/lib/tests/CMakeFiles/test_fixture.dir/ShardManagerTest.cpp.o
+[ 20%] Building CXX object src/lib/tests/CMakeFiles/test_fixture.dir/PGManagerTest.cpp.o
+[ 23%] Building CXX object src/lib/tests/CMakeFiles/test_fixture.dir/fixture_app.cpp.o
+[ 23%] Built target homeobject_core
+Consolidate compiler generated dependencies of target homeobject_memory
+[ 27%] Building CXX object src/lib/memory_backend/CMakeFiles/homeobject_memory.dir/mem_blob_manager.cpp.o
+[ 27%] Building CXX object src/lib/memory_backend/CMakeFiles/homeobject_memory.dir/mem_homeobject.cpp.o
+[ 30%] Building CXX object src/lib/memory_backend/CMakeFiles/homeobject_memory.dir/mem_shard_manager.cpp.o
+[ 32%] Building CXX object src/lib/memory_backend/CMakeFiles/homeobject_memory.dir/mem_pg_manager.cpp.o
+Consolidate compiler generated dependencies of target homeobject_homestore
+[ 34%] Building CXX object src/lib/homestore_backend/CMakeFiles/homeobject_homestore.dir/hs_homeobject.cpp.o
+[ 37%] Building CXX object src/lib/homestore_backend/CMakeFiles/homeobject_homestore.dir/hs_blob_manager.cpp.o
+[ 39%] Building CXX object src/lib/homestore_backend/CMakeFiles/homeobject_homestore.dir/hs_shard_manager.cpp.o
+[ 41%] Building CXX object src/lib/homestore_backend/CMakeFiles/homeobject_homestore.dir/hs_pg_manager.cpp.o
+[ 44%] Building CXX object src/lib/homestore_backend/CMakeFiles/homeobject_homestore.dir/pg_blob_iterator.cpp.o
+[ 46%] Linking CXX executable test_heap_chunk_selector
+[ 46%] Built target test_heap_chunk_selector
+[ 48%] Building CXX object src/lib/homestore_backend/CMakeFiles/homeobject_homestore.dir/index_kv.cpp.o
+[ 51%] Building CXX object src/lib/homestore_backend/CMakeFiles/homeobject_homestore.dir/heap_chunk_selector.cpp.o
+[ 51%] Built target test_fixture
+[ 53%] Building CXX object src/lib/homestore_backend/CMakeFiles/homeobject_homestore.dir/replication_state_machine.cpp.o
+[ 55%] Building CXX object src/lib/homestore_backend/CMakeFiles/homeobject_homestore.dir/hs_cp_callbacks.cpp.o
+[ 58%] Building CXX object src/lib/homestore_backend/CMakeFiles/homeobject_homestore.dir/hs_http_manager.cpp.o
+[ 60%] Linking CXX static library libhomeobject_memory.a
+[ 60%] Built target homeobject_memory
+[ 62%] Linking CXX executable memory_test
+[ 62%] Built target memory_test
+[ 65%] Linking CXX static library libhomeobject_homestore.a
+[ 86%] Built target homeobject_homestore
+Consolidate compiler generated dependencies of target homestore_tests
+[ 88%] Building CXX object src/lib/homestore_backend/tests/CMakeFiles/homestore_tests.dir/hs_shard_tests.cpp.o
+[ 90%] Building CXX object src/lib/homestore_backend/tests/CMakeFiles/homestore_tests.dir/hs_blob_tests.cpp.o
+[ 93%] Building CXX object src/lib/homestore_backend/tests/CMakeFiles/homestore_tests.dir/hs_pg_tests.cpp.o
+[ 95%] Building CXX object src/lib/homestore_backend/tests/CMakeFiles/homestore_tests.dir/homeobj_cp_tests.cpp.o
+[ 97%] Building CXX object src/lib/homestore_backend/tests/CMakeFiles/homestore_tests.dir/test_homestore_backend.cpp.o
+[ 97%] Built target homestore_tests
+[100%] Linking CXX executable homestore_test
+[100%] Built target homestore_test
+
