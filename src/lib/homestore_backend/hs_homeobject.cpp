@@ -175,7 +175,7 @@ void HSHomeObject::init_homestore() {
                                    .max_data_size = app->max_data_size(),
                                    .max_snapshot_batch_size = s_cast< int >(max_snapshot_batch_size_in_bytes)},
                    [this]() { register_homestore_metablk_callback(); });
-
+    RELEASE_ASSERT(!need_format, "HomeStore should in refactor mode, cannot format!");
     // We either recoverd a UUID and no FORMAT is needed, or we need one for a later superblock
     if (need_format) {
         _our_id = app->discover_svcid(std::nullopt);
