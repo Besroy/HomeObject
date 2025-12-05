@@ -88,7 +88,7 @@ BlobManager::AsyncResult< blob_id_t > HSHomeObject::_put_blob(ShardInfo const& s
         return folly::makeUnexpected(BlobErrorCode::SHUTTING_DOWN);
     }
     incr_pending_request_num();
-        // check user key size
+    // check user key size
     if (blob.user_key.size() > BlobHeader::max_user_key_length) {
         BLOGE(tid, shard.id, 0, "input user key length > max_user_key_length {}", blob.user_key.size(),
               BlobHeader::max_user_key_length);
@@ -167,8 +167,7 @@ BlobManager::AsyncResult< blob_id_t > HSHomeObject::_put_blob(ShardInfo const& s
 
     // Set offset of actual data after the blob header and user key (rounded off)
     req->blob_header()->data_offset = req->blob_header_buf().size();
-    RELEASE_ASSERT(req->blob_header()->data_offset == _data_block_size,
-                       "blob header should equals _data_block_size");
+    RELEASE_ASSERT(req->blob_header()->data_offset == _data_block_size, "blob header should equals _data_block_size");
     // In case blob body is not aligned, create a new aligned buffer and copy the blob body.
     if (((r_cast< uintptr_t >(blob.body.cbytes()) % io_align) != 0) || ((blob_size % io_align) != 0)) {
         // If address or size is not aligned, create a separate aligned buffer and do expensive memcpy.
@@ -355,9 +354,7 @@ BlobManager::AsyncResult< Blob > HSHomeObject::_get_blob_data(const shared< home
             }
 
             auto verify_result = do_verify_blob(read_buf.cbytes(), shard_id, 0 /* no blob_id check */);
-            if (!verify_result.hasValue()) {
-                return folly::makeUnexpected(verify_result.error());
-            }
+            if (!verify_result.hasValue()) { return folly::makeUnexpected(verify_result.error()); }
             std::string user_key = std::move(verify_result.value());
 
             BlobHeader const* header = r_cast< BlobHeader const* >(read_buf.cbytes());
@@ -715,14 +712,15 @@ BlobManager::Result< std::string > HSHomeObject::do_verify_blob(const void* blob
         return folly::makeUnexpected(BlobError(BlobErrorCode::CHECKSUM_MISMATCH));
     }
 
-    return header->get_user_key();
+    return header->get_user_key().value(); // Must have a value as header verified above
 }
 
 bool HSHomeObject::verify_blob(const void* blob, const shard_id_t shard_id, const blob_id_t blob_id,
                                bool allow_delete_marker) const {
-    if (allow_delete_marker && !std::memcmp(blob, delete_marker_blob_data.data(), delete_marker_blob_data.size())) {
-        LOGW("find delete_marker for shard_id={}, blob_id={}, skipping verification!", shard_id, blob_id);
-        return true;
+    // Handle deleteMarker case
+    if (0 == std::memcmp(blob, delete_marker_blob_data.data(), delete_marker_blob_data.size())) {
+        LOGW("Found delete_marker for shard_id={}, blob_id={}, skipping verification!", shard_id, blob_id);
+        return allow_delete_marker;
     }
 
     // Use the new _verify_blob method
